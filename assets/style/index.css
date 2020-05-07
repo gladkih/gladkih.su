@@ -1,0 +1,60 @@
+h1 {
+    margin: 0;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1em;
+}
+
+p {
+    font-size: 20px;
+    margin: 0.1em 0 0.7em;
+}
+
+a {
+    color: #d0d1d2;
+    display: inline-block;
+    border-bottom: 1px solid rgba(90, 171, 237, 0.6);
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 1px solid #d0d1d2;
+    transition: all .4s;
+}
+
+.page {
+    font-family: sans-serif;
+}
+
+.page__body {
+    background: linear-gradient(to bottom, #3c617a 0%, #85a4bc 100%);
+    margin: 0;
+    color: #c5dfef;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.person {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.person__info {
+    display: flex;
+}
+
+.person__img {
+    width: 250px;
+    height: 250px;
+    margin-right: 20px;
+}
+
+.person__job {
+    font-size: 16px;
+    margin-bottom: 2em;
+}
+
+.person__links {
+
+}
