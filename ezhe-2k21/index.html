@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Новогодняя магия от Женечки</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style>
+            body {
+                background-image: url('./00.jpg');
+            }
+            .magic-btn {
+                cursor: pointer;
+                max-width: 250px;
+                display: block;
+                margin: 1em auto;
+                border: none;
+                position: relative;
+                z-index: 1;
+                padding: 1.5em 3em;
+                border-radius: 50px;
+                color: #fff;
+                transition: background-color 0.3s, color 0.3s;
+                font-size: 14px;
+                background-color: #009ac9;
+                overflow: hidden;
+            }
+
+            .magic-btn:focus {
+                outline: none;
+                box-shadow:
+                        0 1px 1px rgba(0,0,0,1),
+                        0 -1px 1px rgba(0,0,0,1),
+                        1px 0 1px rgba(0,0,0,1),
+                        -1px 0 1px rgba(0,0,0,1);
+            }
+
+            .magic-btn:before {
+                content: '';
+                position: absolute;
+                top: -20px;
+                left: -20px;
+                bottom: -20px;
+                right: -20px;
+                background: inherit;
+                border-radius: 50px;
+                z-index: -1;
+                opacity: 0.4;
+                transform: scale3d(0.8, 0.5, 1);
+            }
+
+            .magic-btn:hover {
+                transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
+                color: #ECEFF1;
+                animation: anim-moema-1 0.3s forwards;
+            }
+
+            .magic-btn:hover::before {
+                animation: anim-moema-2 0.3s 0.3s forwards;
+            }
+            @keyframes anim-moema-1 {
+                60% {
+                    transform: scale3d(0.8, 0.8, 1);
+                }
+                85% {
+                    transform: scale3d(1.1, 1.1, 1);
+                }
+                100% {
+                    transform: scale3d(1, 1, 1);
+                }
+            }
+            @keyframes anim-moema-2 {
+                to {
+                    opacity: 0;
+                    transform: scale3d(1, 1, 1);
+                }
+            }
+
+            .magic-img {
+                margin: 20px;
+                text-align: center;
+            }
+            
+            .magic-img img {
+                max-width: 100%;
+                max-height: 87vh;
+            }
+
+            .ezhe-magic {
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <button type="button" onclick="magic()" class="magic-btn">Magic!</button>
+        <div class="magic-img">
+            <img src='0.png' id="ezhe-magic" class="ezhe-magic" alt="Предсказания от Женечки"/>
+        </div>
+        <script>
+            var img = document.getElementById('ezhe-magic');
+            var imgPath;
+
+            var getRandomInt = function (min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min)) + min;
+            };
+
+            var magic = function() {
+                imgPath = getRandomInt(1, 30) + '.jpg';
+                img.src = imgPath;
+            };
+
+            img.addEventListener('click', function() {
+                window.open(imgPath, '_blank');
+            })
+        </script>
+    </body>
+</html>
